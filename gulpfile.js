@@ -4,12 +4,13 @@ var gulp 		= require('gulp'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglifyjs'),
     cssnano     = require('gulp-cssnano'),
-    rename      = require('gulp-rename'),
+    // rename      = require('gulp-rename'),
     del         = require('del'),
     autoprefixer= require('gulp-autoprefixer'),
     htmlmin     = require('gulp-htmlmin'),
-    ignore      = require('gulp-ignore'),
-    imagemin 	= require('gulp-imagemin');
+    // ignore      = require('gulp-ignore'),
+    imagemin 	= require('gulp-imagemin'),
+    jade        = require('gulp-jade');
 
 gulp.task('sass', function(){
 	return gulp.src('app/scss/main.scss')
@@ -19,14 +20,31 @@ gulp.task('sass', function(){
 		.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('browser-sync', function(){
-	browserSync({
-		server: {
-			baseDir : 'app'
-		},
-		notify: false
-	})
+gulp.task('jadeh', function() {
+  gulp.src('./app/jade/index.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('./app'))
+    .pipe(browserSync.reload({stream: true}))
 });
+
+gulp.task('browser-sync', function(){
+    browserSync({
+        server: {
+            baseDir : 'app'
+        },
+        notify: false
+    })
+});
+
+
+gulp.task('watch', ['browser-sync','jadeh', 'sass'], function(){
+	gulp.watch('app/scss/**/*.scss', ['sass']);
+	gulp.watch('app/jade/**/*.jade', ['jadeh']);
+    gulp.watch('app/index.html', browserSync.reload); 
+    gulp.watch('app/*.сss', browserSync.reload);
+	gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
 
 // gulp.task('scripts', function() {
 //     return gulp.src([ // Take all libraries
@@ -41,8 +59,8 @@ gulp.task('browser-sync', function(){
 // gulp.task('css-libs', function() {
 //     return gulp.src([ // Take all the css files and minify
 
-//     	]) 
-//     	.pipe(concat('libs.min.css')) // Concat the new file libs.min.css
+//      ]) 
+//      .pipe(concat('libs.min.css')) // Concat the new file libs.min.css
 //         .pipe(cssnano()) // Compress
 //         .pipe(gulp.dest('app/css')); // Dest in app/css
 // });
@@ -56,12 +74,6 @@ gulp.task('browser-sync', function(){
 //         .pipe(gulp.dest('app/css')); // Dest in app/css
 // });
 
-gulp.task('watch', ['browser-sync', 'sass'], function(){
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/*.сss', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
-});
 
 gulp.task('clean', function() {
     return del.sync('dist'); // Delete folder dist before build

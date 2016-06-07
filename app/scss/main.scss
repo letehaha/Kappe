@@ -1,1 +1,8 @@
 @import 'variable.scss';
+@import 'sidebar.scss';
+@import 'pages/home.scss';
+
+main{
+	display: flex;
+	background-color: #ccc;
+}

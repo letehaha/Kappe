@@ -1,0 +1,99 @@
+.sidebar{
+	min-width: 250px;
+	width: 300px;
+	background-color: #242b2e;
+	box-shadow: 20px 0px 50px 0px rgba(0,0,0,0.6);
+	overflow: hidden;
+	z-index: 999;
+}
+
+.logo{
+	height: 125px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	.logo_link{
+		img{
+			display: block;
+		}
+	}
+}
+.sidebar_nav{
+	li{
+		text-align: right;
+		border-bottom: 1px solid #293034;
+		background: linear-gradient(to top, #333b3f, #2e363a);
+		a{
+			display: block;
+			text-transform: uppercase;
+			padding: 25px;
+			font: 300 18px/18px $main_font;
+			color: #fff;
+			transition: .3s;
+			&:hover{
+				background-color: #20aba9;
+			}
+		}
+		.active{
+			background-color: #20aba9;
+		}
+	}
+}
+
+.filter{
+	border-bottom: 1px solid #1e282b;
+}
+.filter_descr{
+	padding: 25px;
+	text-align: right;
+	font: 300 19px/19px $main_font;
+	color: #1ab5b3;
+	display: block;
+	img{
+		margin-left: 10px;
+	}
+}
+.filter_nav{
+	padding: 0 25px 25px;
+	li{
+		text-align: right;
+		a{
+			font: 300 13px/26px $main_font;
+			color: #6b7072;
+		}
+		.active{
+			color: #fff;
+		}
+	}
+}
+.socials{
+	ul{
+		padding: 30px 25px 25px;
+		display: flex;
+		justify-content: space-between;
+		li{
+			width: 24px;
+			height: 24px;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		li:nth-child(1){background-image: url('../img/icons/socials/webicon-flickr.png');}
+		li:nth-child(2){background-image: url('../img/icons/socials/webicon-googleplus.png');}
+		li:nth-child(3){background-image: url('../img/icons/socials/webicon-twitter.png');}
+		li:nth-child(4){background-image: url('../img/icons/socials/webicon-pinterest.png');}
+		li:nth-child(5){background-image: url('../img/icons/socials/webicon-dribbble.png');}
+		li:nth-child(6){background-image: url('../img/icons/socials/webicon-behance.png');}
+		li:nth-child(7){background-image: url('../img/icons/socials/webicon-facebook.png');}
+	}
+}
+.copyright{
+	padding: 0 25px 25px;
+	display: block;
+	text-align: right;
+	font: 300 12px/12px $main_font;
+	color: #6b7072;
+}
