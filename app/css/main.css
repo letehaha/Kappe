@@ -1,6 +1,7 @@
 .sidebar {
   min-width: 250px;
   width: 300px;
+  max-width: 300px;
   background-color: #242b2e;
   box-shadow: 20px 0px 50px 0px rgba(0, 0, 0, 0.6);
   overflow: hidden;
@@ -227,6 +228,128 @@
       transition: .3s ease-out; }
     .item_hover .item_hover-box:hover i {
       margin-left: 10px; }
+
+.wrapper_about {
+  margin: 20px;
+  padding: 25px;
+  width: 100%;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.about_box {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  padding: 15px; }
+
+.about_left_box {
+  border-right: 1px solid #e5e5e5; }
+
+.about_descr {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 25px; }
+
+.about_img {
+  margin-bottom: 25px; }
+  .about_img img {
+    display: block;
+    width: 100%; }
+
+.about_intro h2 {
+  font: 300 24px/36px "Roboto", "Arial", sans-serif;
+  color: #000; }
+
+.about_intro p {
+  margin-bottom: 45px;
+  font: 300 18px/30px "Roboto", "Arial", sans-serif;
+  color: #a3a3a3; }
+
+.about_intro p:last-child {
+  margin-bottom: 0; }
+
+.about_team_photo {
+  margin-top: 20px; }
+  .about_team_photo h2 {
+    color: #333;
+    font: 300 24px/36px "Roboto", "Arial", sans-serif;
+    margin-bottom: 25px; }
+
+.about_team_photo-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .about_team_photo-photo .about_photo_item {
+    display: inline-block;
+    width: 32%;
+    margin-bottom: 15px;
+    position: relative; }
+    .about_team_photo-photo .about_photo_item:hover .about_photo_item_hover {
+      opacity: 1; }
+    .about_team_photo-photo .about_photo_item img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .about_team_photo-photo .about_photo_item_hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #2db8b7;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out; }
+    .about_team_photo-photo .about_photo_item_hover span:nth-child(1) {
+      text-transform: uppercase;
+      font: 300 16px/26px "Roboto", "Arial", sans-serif; }
+    .about_team_photo-photo .about_photo_item_hover span:nth-child(2) {
+      font: 300 13px/20px "Roboto", "Arial", sans-serif; }
+
+.about_skills h2 {
+  font: 300 24px/36px "Roboto", "Arial", sans-serif;
+  color: #000; }
+
+.about_progress {
+  margin-top: 15px; }
+  .about_progress span {
+    font: 300 15px/30px "Roboto", "Arial", sans-serif;
+    color: #727272; }
+  .about_progress progress {
+    width: 100%;
+    height: 30px;
+    color: #333;
+    position: relative; }
+    .about_progress progress:before {
+      position: absolute;
+      content: attr(data-progress);
+      height: 20px;
+      width: 20px;
+      right: 0;
+      top: -25px;
+      font: 300 14px/25px "Roboto", "Arial", sans-serif;
+      color: #000; }
 
 main {
   display: -webkit-box;

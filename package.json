@@ -1,23 +1,23 @@
 {
   "name": "kappe",
   "version": "1.0.0",
-  "description": "psd layout",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/letehaha/Kappe.git"
+    "url": "git+https://github.com/letehaha/diplomaGulp.git"
   },
-  "author": "Dmitry Sviridenko (letehaha)",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/letehaha/Kappe/issues"
+    "url": "https://github.com/letehaha/diplomaGulp/issues"
   },
-  "homepage": "https://github.com/letehaha/Kappe#readme",
+  "homepage": "https://github.com/letehaha/diplomaGulp#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.12",
+    "browser-sync": "^2.13.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
